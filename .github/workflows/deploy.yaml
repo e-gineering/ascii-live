@@ -52,6 +52,6 @@ jobs:
           registryPassword: ${{ secrets.EGSPIN_REGISTRY_PASSWORD }}
           containerAppName: egspin
           resourceGroup: egspin
-          imageToBuild: ghcr.io/egspin:${{ github.sha }}
+          imageToBuild: ghcr.io/e-gineering/ascii-live:${{ github.sha }}
           # _buildArgumentsKey_: |
           #   _buildArgumentsValues_
