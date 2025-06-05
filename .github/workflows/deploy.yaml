@@ -19,11 +19,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Docker image
+      - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ghcr.io/e-gineering/ascii-live:${{ github.sha }}
+          tags: |
+            ghcr.io/e-gineering/ascii-live:${{ github.sha }}
+            ghcr.io/e-gineering/ascii-live:latest
 
   deploy:
     needs: build
