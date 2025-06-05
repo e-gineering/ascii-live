@@ -45,7 +45,7 @@ jobs:
       - name: Deploy to Azure Container Apps
         uses: azure/container-apps-deploy-action@v2
         with:
-          appSourcePath: ${{ github.workspace }}
+          # appSourcePath: ${{ github.workspace }}
           # _dockerfilePathKey_: _dockerfilePath_
           registryUrl: ghcr.io
           registryUsername: ${{ secrets.EGSPIN_REGISTRY_USERNAME }}
